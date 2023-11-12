@@ -21,3 +21,7 @@ func set_attributes(input_: Dictionary) -> void:
 	bg.set("theme_override_styles/panel", style)
 	style.bg_color = Global.color.page[type][subtype]
 	custom_minimum_size = Vector2(Global.vec.size.page)
+
+
+func set_recipe(recipe_: MarginContainer) -> void:
+	pass

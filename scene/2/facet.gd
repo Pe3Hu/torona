@@ -5,20 +5,20 @@ extends MarginContainer
 
 var dice = null
 var index = null
-var token = null
+var symbol = null
 
 
 func set_attributes(input_: Dictionary) -> void:
 	dice = input_.dice
 	index = input_.index
-	token = Global.arr.token[index-1]
+	symbol = Global.arr.symbol[index-1]
 	
 	custom_minimum_size = Vector2(Global.vec.size.facet)
 	var input = {}
 	input.proprietor = self
 	input.title = {}
-	input.title.type = "token"
-	input.title.subtype = token
+	input.title.type = "symbol"
+	input.title.subtype = symbol
 	input.stack = {}
 	input.stack.type = "number"
 	input.stack.subtype = index

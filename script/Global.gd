@@ -24,7 +24,7 @@ func _ready() -> void:
 
 func init_arr() -> void:
 	arr.edge = [1, 2, 3, 4, 5, 6]
-	arr.token = ["A", "A", "A", "B", "B", "C"]
+	arr.symbol = ["A", "A", "A", "B", "B", "C"]
 
 
 func init_num() -> void:
@@ -125,14 +125,14 @@ func init_kit() -> void:
 	
 	for kit in array:
 		var data = {}
-		data.token = {}
+		data.symbols = {}
 		
 		for key in kit:
 			if key != "index" and key != "order":
 				var words = key.split(" ")
 				
-				if words.has("token"):
-					data.token[words[1]] = kit[key]
+				if words.has("symbol"):
+					data.symbols[words[1]] = kit[key]
 				else:
 					data[key] = kit[key]
 		
@@ -141,7 +141,7 @@ func init_kit() -> void:
 		
 		if !dict.kit.order.has(kit.order):
 			dict.kit.order[kit.order] = int(kit.index)
-	
+
 
 
 func init_node() -> void:
@@ -151,6 +151,7 @@ func init_node() -> void:
 func init_scene() -> void:
 	scene.mage = load("res://scene/1/mage.tscn")
 	scene.page = load("res://scene/1/page.tscn")
+	scene.recipe = load("res://scene/1/recipe.tscn")
 	
 	scene.dice = load("res://scene/2/dice.tscn")
 	scene.facet = load("res://scene/2/facet.tscn")

@@ -27,16 +27,3 @@ func get_facet_value_on_dices() -> Array:
 		values.append(dice.get_current_facet_value())
 	
 	return values
-
-
-#func crush_excess_dices() -> void:
-#	for dice in dices.get_children():
-#
-#		if dice.member == null:
-#			dices.remove_child(dice)
-#			dice.queue_free()
-
-
-func update_dices_columns() -> void:
-	var col = max(ceil((dices.get_child_count() + 1) / 10.0), 1)
-	dices.columns = col
